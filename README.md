@@ -1,5 +1,6 @@
-# QEMU-live_migration
-QEMU Live Migration of VMs with BitmapTrace mechanism
+# QEMU-BitmapTrace
+QEMU BitmapTrace mechanism for profiling VM memory accesses ("shadow" Migration)  
+*Currently supports pre-copy technique only (without optimizations)*
 
 <br />
 
