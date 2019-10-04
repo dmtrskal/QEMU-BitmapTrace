@@ -7,25 +7,25 @@ QEMU BitmapTrace mechanism for profiling VM memory accesses ("shadow" Migration)
 QMP  command example: 
 
 1) Verify that QEMU started in KVM mode as well as QMP on a TCP socket, so that telnet can be used : 
-
-  > $ qemu […] -enable-kvm […] -qmp tcp:localhost:4444,server,nowait 
-
+```
+$ qemu […] -enable-kvm […] -qmp tcp:localhost:4444,server,nowait 
+```
 2) Run telnet 
-
-> $ telnet localhost 4444 
-
+```
+$ telnet localhost 4444 
+```
 3) You should see QMP's greeting banner : 
-
-> {"QMP": {"version": {"qemu": {"micro": 0, "minor": 6, "major": 1}, "package": ""}, "capabilities": []}}
-
+```
+{"QMP": {"version": {"qemu": {"micro": 0, "minor": 6, "major": 1}, "package": ""}, "capabilities": []}}
+```
 4) Issue the qmp_capabilities command, so that QMP enters command mode : 
-
-> { "execute": "qmp_capabilities" }  
-
+```
+{ "execute": "qmp_capabilities" }  
+```
 5) You can now issue commands. So, to enable BitmapTrace mechanism, you should issue  bitmap-trace with the appropriate arguments, as shown below: 
-
-> { "execute": "bitmap-trace", "arguments": { "state": true, "filename": "/home/user/dirty_pages_profiling.log", "iterations": 10, "period": 1000 } } 
-
+```
+{ "execute": "bitmap-trace", "arguments": { "state": true, "filename": "/home/user/dirty_pages_profiling.log", "iterations": 10, "period": 1000 } } 
+```
 6) Once BitmapTrace is finished successfully, results are displayed on HMP and are logged to filename specified. 
 
 <br />
@@ -34,25 +34,25 @@ QMP  command example:
 QEMU monitor(or HMP) command example: 
 
 1) Verify that QEMU started in KVM mode : 
-
-> $ qemu […] -enable-kvm 
-
+```
+$ qemu […] -enable-kvm 
+```
 2) With “help bitmap-trace", you can get details the command: 
+```
+(qemu) help bitmap-trace  
 
-> (qemu) help bitmap-trace  
+bitmap-trace state filename iterations period -- Enable/Disable the bitmap tracking mechanism 
 
-> bitmap-trace state filename iterations period -- Enable/Disable the bitmap tracking mechanism 
+   filename: file where the dirty pages per iteration will be logged 
 
->   filename: file where the dirty pages per iteration will be logged 
+   iterations: number of times the dirty pages will be logged 
 
->   iterations: number of times the dirty pages will be logged 
-
->   period: time interval in milliseconds between two consecutive iterations 
-
+   period: time interval in milliseconds between two consecutive iterations 
+```
 3) Enable BitmapTrace mechanism, by issuing “bitmap-trace” with the appropriate arguments 
-
-> (qemu) bitmap-trace on "/home/user/dirty_pages_profiling.log" 10 1000 
-
+```
+(qemu) bitmap-trace on "/home/user/dirty_pages_profiling.log" 10 1000 
+```
 4) Once BitmapTrace is finished successfully, results are displayed on HMP and are logged to filename specified. 
 
 <br />
