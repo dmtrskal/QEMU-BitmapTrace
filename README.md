@@ -71,4 +71,4 @@ The arguments for using BitmapTrace commands are the following:
 <br />
 <br />
 
-This project is part of my Diploma Thesis in [*CSLab Ntua*](http://www.cslab.ece.ntua.gr/)
+This project is part of my Diploma Thesis "[*Prediction Techniques for Live Migration of Virtual Machines in Cloud Computing Environments *](https://dspace.lib.ntua.gr/xmlui/handle/123456789/49398)" in [*CSLab Ntua*](http://www.cslab.ece.ntua.gr/)
