@@ -65,10 +65,10 @@ The arguments for using BitmapTrace commands are the following:
 **filename**: name of the file where the dirty pages per iteration will be logged (mandatory) 
 
 **iterations**: number of times the dirty pages will be logged. The min and max values are 3 and 100000 respectively. The default value is 3, if the “iterations” parameter is not stated. 
-
+Prediction Techniques for Live Migration of Virtual Machines in Cloud Computing Environments
 **period**: time interval in milliseconds between two consecutive iterations. The min and max values are 10 and 100000 respectively. The default value is 10, if the “period” parameter is not stated. 
 
 <br />
 <br />
 
-This project is part of my Diploma Thesis "[*Prediction Techniques for Live Migration of Virtual Machines in Cloud Computing Environments *](https://dspace.lib.ntua.gr/xmlui/handle/123456789/49398)" in [*CSLab Ntua*](http://www.cslab.ece.ntua.gr/)
+This project is part of my Diploma Thesis "[Prediction Techniques for Live Migration of Virtual Machines in Cloud Computing Environments](https://dspace.lib.ntua.gr/xmlui/handle/123456789/49398)" in [*CSLab Ntua*](http://www.cslab.ece.ntua.gr/)
