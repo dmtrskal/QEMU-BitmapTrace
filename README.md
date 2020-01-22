@@ -67,3 +67,8 @@ The arguments for using BitmapTrace commands are the following:
 **iterations**: number of times the dirty pages will be logged. The min and max values are 3 and 100000 respectively. The default value is 3, if the “iterations” parameter is not stated. 
 
 **period**: time interval in milliseconds between two consecutive iterations. The min and max values are 10 and 100000 respectively. The default value is 10, if the “period” parameter is not stated. 
+
+<br />
+<br />
+
+This project is part of my Diploma Thesis in [*CSLab Ntua*](http://www.cslab.ece.ntua.gr/)
